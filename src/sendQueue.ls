@@ -3,7 +3,7 @@ export !function MultiSend
   
   get-queue = (name) ~>
     if not queues.has-own-property name
-      queues[name] = new SubQueue!
+      queues[name] = new SendQueue!
     queues[name]
 
   @push = (name, action) ~>
